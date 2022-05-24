@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6lINpt2axAF0jF6RL1xUvwqEQ6DVhOYsT4eEfmuMf/A64B9SaoQFbKEJnjo7fGA0YyqO+oHxV8gjMlVw6CXWrw==",
+  "dgSpecHash": "d64YpRlmzcHilom4vcN/uIlpjxGpSy4HFwpTBemdlraVMD3ZfTal+7TO1NW4H2oy+b5ENvZub7LxfIkzd8PnmQ==",
   "success": true,
-  "projectFilePath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/FinalPrac.csproj",
+  "projectFilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/FinalPrac.csproj",
   "expectedPackageFiles": [
     "/Users/jonaselkjaer/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/jonaselkjaer/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",

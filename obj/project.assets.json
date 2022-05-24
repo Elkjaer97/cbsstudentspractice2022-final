@@ -9821,11 +9821,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/FinalPrac.csproj",
+      "projectUniqueName": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/FinalPrac.csproj",
       "projectName": "FinalPrac",
-      "projectPath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/FinalPrac.csproj",
+      "projectPath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/FinalPrac.csproj",
       "packagesPath": "/Users/jonaselkjaer/.nuget/packages/",
-      "outputPath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/obj/",
+      "outputPath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jonaselkjaer/.nuget/NuGet/NuGet.Config"

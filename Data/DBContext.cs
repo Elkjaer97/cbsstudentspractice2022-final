@@ -16,4 +16,6 @@ using FinalPrac.Models;
         }
 
         public DbSet<FinalPrac.Models.Profile> Profile { get; set; }
+
+        public DbSet<FinalPrac.Models.Event> Event { get; set; }
     }

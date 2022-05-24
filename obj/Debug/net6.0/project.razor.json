@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/FinalPrac.csproj",
+  "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/FinalPrac.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -16298,63 +16298,88 @@
   "RootNamespace": "FinalPrac",
   "Documents": [
     {
-      "FilePath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/Views/Home/Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/Views/Shared/_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/Views/Profile/Create.cshtml",
-      "TargetPath": "Views\\Profile\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/Views/Profile/Delete.cshtml",
-      "TargetPath": "Views\\Profile\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/Views/_ViewStart.cshtml",
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/Views/Home/Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Event/Index.cshtml",
+      "TargetPath": "Views\\Event\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/Views/Profile/Edit.cshtml",
-      "TargetPath": "Views\\Profile\\Edit.cshtml",
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Event/Edit.cshtml",
+      "TargetPath": "Views\\Event\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/Views/Shared/Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Profile/Delete.cshtml",
+      "TargetPath": "Views\\Profile\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/Views/Shared/_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/Views/Profile/Index.cshtml",
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Profile/Index.cshtml",
       "TargetPath": "Views\\Profile\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/Views/Profile/Details.cshtml",
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Event/Delete.cshtml",
+      "TargetPath": "Views\\Event\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Profile/Edit.cshtml",
+      "TargetPath": "Views\\Profile\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Home/Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Event/Details.cshtml",
+      "TargetPath": "Views\\Event\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Profile/Details.cshtml",
       "TargetPath": "Views\\Profile\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/jonaselkjaer/Desktop/Programmering/4-sem-NETC#/Eksamen2022/FinalPrac/Views/_ViewImports.cshtml",
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Shared/_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Event/Create.cshtml",
+      "TargetPath": "Views\\Event\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Shared/Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Shared/_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Profile/Create.cshtml",
+      "TargetPath": "Views\\Profile\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/Views/Home/Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     }
   ],
