@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/FinalPrac.csproj": {}
+    "/Users/jonaselkjaer/Desktop/cbsstudentspractice2022-final/FinalPrac.csproj": {}
   },
   "projects": {
-    "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/FinalPrac.csproj": {
+    "/Users/jonaselkjaer/Desktop/cbsstudentspractice2022-final/FinalPrac.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/FinalPrac.csproj",
+        "projectUniqueName": "/Users/jonaselkjaer/Desktop/cbsstudentspractice2022-final/FinalPrac.csproj",
         "projectName": "FinalPrac",
-        "projectPath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/FinalPrac.csproj",
+        "projectPath": "/Users/jonaselkjaer/Desktop/cbsstudentspractice2022-final/FinalPrac.csproj",
         "packagesPath": "/Users/jonaselkjaer/.nuget/packages/",
-        "outputPath": "/Users/jonaselkjaer/Desktop/dotnetcbseksamen/cbsstudentspractice2022-final/obj/",
+        "outputPath": "/Users/jonaselkjaer/Desktop/cbsstudentspractice2022-final/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jonaselkjaer/.nuget/NuGet/NuGet.Config"
@@ -38,11 +38,19 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SQLite": {
               "target": "Package",
@@ -50,11 +58,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.5, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.5, )"
             }
           },
           "imports": [

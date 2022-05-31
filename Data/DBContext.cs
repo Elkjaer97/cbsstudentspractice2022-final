@@ -5,10 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using FinalPrac.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
+namespace FinalPrac.Data;
 
-
-    public class DBContext : DbContext
+    public class DBContext : IdentityDbContext
     {
         public DBContext (DbContextOptions<DBContext> options)
             : base(options)

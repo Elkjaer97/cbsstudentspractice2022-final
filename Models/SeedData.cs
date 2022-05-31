@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 //using FinalPrac.Data; 
 using System;
 using System.Linq;
+using FinalPrac.Data;
 
 namespace FinalPrac.Models 
 {

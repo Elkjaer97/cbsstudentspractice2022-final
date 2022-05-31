@@ -1,10 +1,20 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Identity;
 using FinalPrac.Models;
+using FinalPrac.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<DBContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DBContext") ?? throw new InvalidOperationException("Connection string 'DBContext' not found.")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("DBContext")));
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+.AddDefaultUI()
+.AddEntityFrameworkStores<DBContext>();
+
+builder.Services.AddDbContext<DBContext>(options =>
+options.UseSqlite("DBContext"));
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -30,9 +40,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 app.UseAuthorization();
+app.UseAuthentication();
 
+app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=index}/{id?}"); //{id?}
