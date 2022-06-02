@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinalPrac.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20220531163315_CreateIdentitySchema")]
+    [Migration("20220601132438_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

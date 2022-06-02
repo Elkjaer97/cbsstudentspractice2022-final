@@ -5,28 +5,36 @@ using FinalPrac.Models;
 using FinalPrac.Data;
 var builder = WebApplication.CreateBuilder(args);
 
+
+
+
+
+
 builder.Services.AddDbContext<DBContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DBContext")));
+
+builder.Services.AddEndpointsApiExplorer(); //Ved ikke, men virker til vores logout
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 .AddDefaultUI()
 .AddEntityFrameworkStores<DBContext>();
-
-builder.Services.AddDbContext<DBContext>(options =>
-options.UseSqlite("DBContext"));
-
-
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// builder.Services.AddDbContext<DBContext>(options =>
+// options.UseSqlite("DBContext"));
+
+
+
+
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
+// using (var scope = app.Services.CreateScope())
+// {
+//     var services = scope.ServiceProvider;
 
-    SeedData.Initialize(services);
-}
+//     SeedData.Initialize(services);
+// }
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -40,8 +48,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
+
 
 app.MapRazorPages();
 app.MapControllerRoute(

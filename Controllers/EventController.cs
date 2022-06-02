@@ -5,11 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using FinalPrac.Models;
 using FinalPrac.Data;
 
 namespace FinalPrac.Controllers
 {
+    [Authorize]
     public class EventController : Controller
     {
         private readonly DBContext _context;
@@ -20,6 +23,7 @@ namespace FinalPrac.Controllers
         }
 
         // GET: Event
+        [AllowAnonymous] //Alle kan se dette
         public async Task<IActionResult> Index()
         {
             return View(await _context.Event.ToListAsync());
@@ -151,3 +155,5 @@ namespace FinalPrac.Controllers
         }
     }
 }
+
+// Tjek de andres opgave
