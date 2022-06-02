@@ -1,0 +1,73 @@
+@model FinalPrac.Models.PostIndexVm
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Posts</h1>
+
+<form asp-controller="Posts" asp-action="Index" method="get">
+    <div>
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="SearchString" value="@Model.SearchString" />
+        <input type="submit" value="Search" />
+    </div>
+</form>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>Creator</th>
+            <th>Title</th>
+            <th>Text</th>
+            <th>Created</th>
+            <th>Status</th>
+         @*    <th>
+                @Html.DisplayNameFor(model => model.Posts.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th> *@
+         
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Posts) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+                <a asp-action="RedirectToCreateComment" asp-route-id="@item.Id">Add comment</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
