@@ -50,24 +50,27 @@ namespace FinalPrac.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("About")
+                    b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateTime>("EndDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("EventName")
+                    b.Property<DateTime>("StartDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Location")
+                    b.Property<string>("Title")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("profileId")
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("handlerEvent")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("EventId");
 
-                    b.HasIndex("profileId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Event");
                 });
@@ -341,11 +344,11 @@ namespace FinalPrac.Migrations
 
             modelBuilder.Entity("FinalPrac.Models.Event", b =>
                 {
-                    b.HasOne("FinalPrac.Models.Profile", "profile")
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
                         .WithMany()
-                        .HasForeignKey("profileId");
+                        .HasForeignKey("UserId");
 
-                    b.Navigation("profile");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("FinalPrac.Models.Post", b =>

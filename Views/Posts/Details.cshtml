@@ -4,19 +4,12 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Comments</h1>
 
 <div>
     <div class="row">
         <div class="col">
             <h4>Post</h4>
-        </div>
-        <div class="col-md-3">
-            <div class="h-100 d-flex align-items-end justify-content-around">
-                <a asp-action="Edit" asp-route-id="@Model?.Post.Id">Edit</a> |
-                <a asp-action="RedirectCreateComment" asp-route-id="@Model?.Post.Id">Add comment</a> |
-                <a asp-action="Index">Back to List</a>
-            </div>
         </div>
     </div>
     <hr />
@@ -53,11 +46,6 @@
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Post.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @foreach (var comment in Model.Post.Comments)
 {
     <div class="row">
@@ -71,8 +59,17 @@
         </div>
         <div class="col-4">
             <a asp-action="RedirectDeleteComment" asp-route-id="@comment.CommentId">Delete comment</a>
-        </div>
+            
+    </div>
         <br>
 
     </div>
+
+
 }
+
+<div>
+         <a asp-action="RedirectCreateComment" asp-route-id="@Model?.Post.Id">Add comment</a> 
+        <a asp-action="Edit" asp-route-id="@Model?.Post.Id">Edit</a> |
+        <a asp-action="Index">Back to Posts</a>
+    </div>

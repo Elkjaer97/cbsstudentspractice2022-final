@@ -18,8 +18,6 @@ namespace FinalPrac.Data;
 
         public DbSet<FinalPrac.Models.Profile> Profile { get; set; }
 
-        public DbSet<FinalPrac.Models.Event> Event { get; set; }
-
         public DbSet<FinalPrac.Models.Comment> Comment { get; set; }
 
         public DbSet<FinalPrac.Models.Post> Post { get; set; }

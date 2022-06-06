@@ -858,3 +858,7 @@
 /Users/jonaselkjaer/Desktop/cbsstudentspractice2022-final/bin/Debug/net6.0/Microsoft.Extensions.Identity.Core.dll
 /Users/jonaselkjaer/Desktop/cbsstudentspractice2022-final/bin/Debug/net6.0/Microsoft.Extensions.Identity.Stores.dll
 /Users/jonaselkjaer/Desktop/cbsstudentspractice2022-final/obj/Debug/net6.0/FinalPrac.MvcApplicationPartsAssemblyInfo.cs
+/Users/jonaselkjaer/Desktop/cbsstudentspractice2022-final/bin/Debug/net6.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/jonaselkjaer/Desktop/cbsstudentspractice2022-final/bin/Debug/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/Users/jonaselkjaer/Desktop/cbsstudentspractice2022-final/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
+/Users/jonaselkjaer/Desktop/cbsstudentspractice2022-final/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll

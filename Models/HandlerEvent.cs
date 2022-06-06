@@ -1,6 +1,6 @@
 namespace FinalPrac.Models;
 
-public enum EventHandler
+public enum HandlerEvent
 {
     GOING, NOTGOING, NOTSURE
 }

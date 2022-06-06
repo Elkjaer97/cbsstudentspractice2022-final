@@ -3,12 +3,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Identity;
 using FinalPrac.Models;
 using FinalPrac.Data;
+
 var builder = WebApplication.CreateBuilder(args);
-
-
-
-
-
 
 builder.Services.AddDbContext<DBContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DBContext")));
@@ -19,7 +15,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 .AddDefaultUI()
 .AddEntityFrameworkStores<DBContext>();
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().
+AddNewtonsoftJson(option => option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);;
 
 // builder.Services.AddDbContext<DBContext>(options =>
 // options.UseSqlite("DBContext"));

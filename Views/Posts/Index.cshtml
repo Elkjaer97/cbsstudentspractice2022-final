@@ -24,23 +24,7 @@
             <th>Title</th>
             <th>Text</th>
             <th>Created</th>
-            <th>Status</th>
-         @*    <th>
-                @Html.DisplayNameFor(model => model.Posts.UserId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Text)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Created)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th> *@
-         
+            <th>Status</th>     
         </tr>
     </thead>
     <tbody>
@@ -63,9 +47,9 @@
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
-                <a asp-action="RedirectToCreateComment" asp-route-id="@item.Id">Add comment</a>
+                <a asp-action="Details" asp-route-id="@item.Id">Comments</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> 
+                @* <a asp-action="RedirectToCreateComment" asp-route-id="@item.Id">Add comment</a> *@
             </td>
         </tr>
 }

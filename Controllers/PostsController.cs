@@ -75,7 +75,7 @@ namespace FinalPrac.Controllers
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View();
+            return View(post);
         }
 
         // GET: POSTS/DETAILS/5
