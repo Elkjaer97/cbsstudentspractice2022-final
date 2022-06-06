@@ -15,7 +15,7 @@ public class Post {
     public PostStatus Status { get; set; }
 
     public List<Comment>? Comments { get; set; }
-
+    
     public string? UserId { get; set; }
 
     public IdentityUser? User { get; set; }

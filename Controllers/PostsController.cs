@@ -10,8 +10,8 @@ using Microsoft.AspNetCore.Identity;
 using FinalPrac.Data;
 using FinalPrac.Models;
 
-namespace FinalPrac.Controllers;
-
+namespace FinalPrac.Controllers
+{
     [Authorize]
     public class PostsController : Controller
     {
@@ -35,12 +35,12 @@ namespace FinalPrac.Controllers;
             {
                 SearchString = "";
             }
-            var posts = from p in _context.Post select p;
+             
+             var posts = _context.Post.Include(u => u.User).Where(x => x.Title.Contains(SearchString));
+        
 
-            posts = posts.Where(x => x.Title.Contains
-            (SearchString) ||
-                x.Text.Contains(SearchString)).Include( y => y.User);
-            //ViewBag.SearchString = SearchString;
+            ViewBag.SearchString = SearchString;
+            //The ViewBag in ASP.NET MVC is used to transfer temporary data (which is not included in the model) from the controller to the view.
 
             var vm = new PostIndexVm
             {
@@ -62,8 +62,8 @@ namespace FinalPrac.Controllers;
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        //[ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Title","Text","Status")] Post post)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id, Title,Text,Status")] Post post)
         {
             if (ModelState.IsValid)
             {
@@ -76,6 +76,22 @@ namespace FinalPrac.Controllers;
                 return RedirectToAction("Index");
             }
             return View();
+        }
+
+        // GET: POSTS/DETAILS/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            Post p = _context.Post.
+            Include(u => u.User).
+            Include( x => x.Comments).
+            ThenInclude(x => x.User).First(x => x.Id == id);
+
+            var vm = new PostIndexVm
+            {
+                Post = p
+            };
+
+            return View(vm);
         }
 
         // GET: Posts/Edit/5
@@ -173,5 +189,18 @@ namespace FinalPrac.Controllers;
         {
           return _context.Post.Any(e => e.Id == id);
         }
+
+        public IActionResult RedirectCreateComment(int Id){
+            return RedirectToAction("Create", "Comments", new { PostId = Id });
+        }
+
+        public IActionResult RedirectDeleteComment(int Id){
+            return RedirectToAction("Delete", "Comments", new { id = Id });
+        }
+
     }
+}
+
+
+    
 

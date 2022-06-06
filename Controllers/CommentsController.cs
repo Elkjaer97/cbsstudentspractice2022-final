@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FinalPrac.Data;
 using FinalPrac.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace FinalPrac.Controllers
 {
@@ -14,22 +16,24 @@ namespace FinalPrac.Controllers
     {
         private readonly DBContext _context;
 
-        public CommentsController(DBContext context)
+        private readonly UserManager<IdentityUser> _userManager;
+
+        public CommentsController(DBContext context, UserManager<IdentityUser> userManager )
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Comments
-        public async Task<IActionResult> Index()
+        public IActionResult RedirectPostDetails(int id)
         {
-            var dBContext = _context.Comment.Include(c => c.Post);
-            return View(await dBContext.ToListAsync());
+            return RedirectToAction("Details", "Posts", new { id = id });
         }
 
         // GET: Comments/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Comment == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -46,9 +50,9 @@ namespace FinalPrac.Controllers
         }
 
         // GET: Comments/Create
-        public IActionResult Create()
+        public IActionResult Create(int PostId)
         {
-            ViewData["PostId"] = new SelectList(_context.Set<Post>(), "Id", "Id");
+            ViewData["PostId"] = PostId;
             return View();
         }
 
@@ -61,11 +65,15 @@ namespace FinalPrac.Controllers
         {
             if (ModelState.IsValid)
             {
+                IdentityUser user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
+                comment.User = user;
+                comment.TimeStamp = DateTime.Now;
+
                 _context.Add(comment);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details", "Posts", new { id = comment.PostId} );
             }
-            ViewData["PostId"] = new SelectList(_context.Set<Post>(), "Id", "Id", comment.PostId);
+            ViewData["PostId"] = new SelectList(_context.Set<Post>(), "Id", "Text", comment.PostId);
             return View(comment);
         }
 
@@ -82,7 +90,7 @@ namespace FinalPrac.Controllers
             {
                 return NotFound();
             }
-            ViewData["PostId"] = new SelectList(_context.Set<Post>(), "Id", "Id", comment.PostId);
+            ViewData["PostId"] = new SelectList(_context.Set<Post>(), "Id", "Text", comment.PostId);
             return View(comment);
         }
 
@@ -118,14 +126,14 @@ namespace FinalPrac.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PostId"] = new SelectList(_context.Set<Post>(), "Id", "Id", comment.PostId);
+            ViewData["PostId"] = new SelectList(_context.Set<Post>(), "Id", "Text", comment.PostId);
             return View(comment);
         }
 
         // GET: Comments/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Comment == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -157,7 +165,7 @@ namespace FinalPrac.Controllers
             }
             
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Details", "Posts", new { id = comment.PostId});
         }
 
         private bool CommentExists(int id)

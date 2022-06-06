@@ -10,6 +10,8 @@ public class Comment {
 
     public DateTime TimeStamp { get; set; }
 
+
+
     public int PostId { get; set; }
 
     public Post? Post { get; set; }
